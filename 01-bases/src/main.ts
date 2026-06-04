@@ -4,7 +4,10 @@ import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import { firstName, lastName } from './bases/01-const-let'
 
-import './bases/03-arrays'
+// import './bases/03-arrays'
+import './bases/04-functions'
+
+
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
   <div class="hero">
