@@ -2,7 +2,7 @@ import './style.css'
 import typescriptLogo from './assets/typescript.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
-
+import { firstName, lastName } from './bases/01-const-let'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
   <div class="hero">
@@ -15,6 +15,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
     <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
   </div>
   <button id="counter" type="button" class="counter"></button>
+  <p>${firstName}${lastName}</p>
 </section>
 
 <div class="ticks"></div>
@@ -56,4 +57,3 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="spacer"></section>
 `
 
-console.log('hello weirdo')
