@@ -6,6 +6,13 @@ interface Hero {
     power?: string
 }
 
+interface CreateHeroArgs {
+    name: string
+    age: number
+    codeName: string
+    power?: string
+}
+
 
 export const person: Hero = {
     name: 'Tony',
@@ -13,13 +20,13 @@ export const person: Hero = {
     codeName: 'Iron Man',
 }
 
-const { age, codeName, name, power = 'No powers' } = person
+// const { age, codeName, name, power = 'No powers' } = person
 
 console.log({ age, name, power })
 
-const createHero = ( args: any ) => ({
+const createHero = ({ name, age, codeName, power }: CreateHeroArgs) => ({
     id: 123,
-    name: args.name,
-    codeName: args.codeName,
-    power: args.power ?? 'No tiene poder'
+    name: name,
+    codeName: codeName,
+    power: power ?? 'No tiene poder'
 })

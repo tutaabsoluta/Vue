@@ -6,7 +6,8 @@ import { firstName, lastName } from './bases/01-const-let'
 
 // import './bases/03-arrays'
 // import './bases/04-functions'
-import './bases/05-dest-obj'
+// import './bases/05-dest-obj'
+import './bases/06-dest-arr'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
