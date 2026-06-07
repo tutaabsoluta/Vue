@@ -1,4 +1,4 @@
-import heroes, { owners } from "../data/heroes";
+import heroes, { owners, type Owner } from "../data/heroes";
 
 
 // import fuera de llaves es el default
@@ -10,7 +10,7 @@ const getHeroById = ( id: number ) => {
     return heroes.find( hero => hero.id === id ) ?? {}
 }
 
-const getHeroesByOwner = ( owner: string ) => {
+const getHeroesByOwner = ( owner: Owner ) => {
     return heroes.filter( hero => hero.owner == owner )
 }
 
