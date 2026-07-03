@@ -11,7 +11,8 @@ import { firstName, lastName } from './bases/01-const-let'
 // import './bases/07-imp-exp'
 // import './bases/08-promises'
 // import './bases/09-fetch'
-import './bases/10-axios'
+// import './bases/10-axios'
+import './bases/11-async-await'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
