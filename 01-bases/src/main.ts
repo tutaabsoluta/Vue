@@ -10,7 +10,8 @@ import { firstName, lastName } from './bases/01-const-let'
 // import './bases/06-dest-arr'
 // import './bases/07-imp-exp'
 // import './bases/08-promises'
-import './bases/09-fetch'
+// import './bases/09-fetch'
+import './bases/10-axios'
 
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
