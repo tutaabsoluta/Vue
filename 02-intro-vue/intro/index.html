@@ -8,6 +8,10 @@
 <body>
 
     <div id="my-app">
+        <h3>{{ message }}</h3>
+        <blockquote>{{ author }}</blockquote>
+
+        <button v-on:click="changeQuote">Change quote</button>
     </div>
     <script type="module" src="app.js"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
