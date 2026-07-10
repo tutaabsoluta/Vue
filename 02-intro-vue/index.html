@@ -7,17 +7,28 @@
 </head>
 <body>
     <div id="myApp">
-        <h1>Batman Quotes</h1>
-
+        <h1>Batman Quotes {{ totalQuotes }}</h1>
+        <input 
+            type="text" 
+            name="" 
+            id="" 
+            placeholder="Add quote"
+            @keypress.enter="addQuote"
+        >
+        <br>
+        <br>
+        <button v-on:click="toggleAuthor">Toggle Author</button>
         <hr>
 
         <li v-for="({ quote, author }, index) in quotes">
             <span> {{ index + 1 }} {{ quote }}</span>
             <blockquote v-if="showAuthor">{{ author }}</blockquote>
         </li>
-        <button v-on:click="toggleAuthor">Toggle Author</button>
     </div>
 </body>
 <script type="module" src="app.js"></script>
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </html>
+
+
+<!-- keypress.enter modificador de eventos -->
