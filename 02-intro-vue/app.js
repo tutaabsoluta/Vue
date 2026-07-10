@@ -10,6 +10,9 @@ const originalQuotes = [
 
 const { computed, createApp, ref } = Vue;
 const quotes = ref(originalQuotes);
+
+const newMessage = ref('');
+
 const totalQuotes = computed(() => {
     return quotes.value.length
 });
@@ -27,7 +30,13 @@ const app = createApp({
         }
 
         const addQuote = () => {
-            quotes.value.unshift({ quote: 'Hola Mundo', author: 'Sergio' })
+            if(newMessage.value === '') {
+                return
+            }
+            quotes.value.unshift({ quote: newMessage.value, author: 'Sergio' })
+
+            // despues de la insercion seteamos un valor vacio para limpiar el input
+            newMessage.value = ''
         }
 
 
@@ -37,6 +46,7 @@ const app = createApp({
             toggleAuthor,
             addQuote,
             totalQuotes,
+            newMessage,
         }
     }
 })
@@ -47,3 +57,4 @@ app.mount('#myApp')
 // El v-show lo oculta pero sigue en el DOM, solo hace un display-none
 
 // si es un componente pesado sirve el v show porque no destruye el component y no reinicia el ciclo de vida del component
+// v model permite crear un 2 way data binding
