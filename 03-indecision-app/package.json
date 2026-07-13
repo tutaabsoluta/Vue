@@ -11,6 +11,7 @@
     "type-check": "vue-tsc --build"
   },
   "dependencies": {
+    "prettier": "^3.9.5",
     "vue": "^3.5.38"
   },
   "devDependencies": {
